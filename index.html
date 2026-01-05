@@ -96,6 +96,11 @@
 </style>
 
 <script>
+    // Enforce HTTPS
+    if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+        location.protocol = 'https:';
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
         const link = document.createElement('a');
         link.href = 'mailto:bookings@africapiano.com';
